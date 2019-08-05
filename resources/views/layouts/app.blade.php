@@ -11,18 +11,17 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-
+    
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    @yield('js_after')
-    @yield('css_after')
+    <!-- yield isi -->
+    @yield('js_head')
+    @yield('css_head')
 </head>
 <body>
 
@@ -82,13 +81,14 @@
             @yield('content')
         </main>
     </div>
-
-    @yield('css')
+    
+    <style>
+        @yield('css_body')
+    </style>
 
     <script>
-
-        @yield('js')
-
+        @yield('js_body')
+        @stack('scripts')
     </script>
 </body>
 </html>

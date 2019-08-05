@@ -1,0 +1,3 @@
+<a href="{{ $url_show }}" class="btn-show" title="Detail: {{ $model->name }}"><button class="btn btn-xs btn-primary">Show</button></a>
+<a href="{{ $url_edit }}" class="btn-edit" title="Detail: {{ $model->name }}"><button class="btn btn-xs btn-success">Edit</button></a>
+<a href="{{ $url_destroy }}" class="btn-delete" title="Detail: {{ $model->name }}"><button class="btn btn-xs btn-danger">Delete</button></a>

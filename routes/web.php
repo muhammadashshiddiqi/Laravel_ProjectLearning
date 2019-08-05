@@ -25,9 +25,6 @@ route::prefix('guestbook')->group(function(){
 });
 
 route::prefix('crud_ajax')->group(function(){
-	Route::get('/', 'CrudAjaxController@index')->name('coba_view');
-	Route::get('/edit_ajax/{id}', 'CrudAjaxController@edit');
-	Route::put('/update_ajax/{id}', 'CrudAjaxController@update');
-	Route::post('/store_ajax', 'CrudAjaxController@store');
-	Route::delete('/destroy_ajax/{id}', 'CrudAjaxController@destroy');
+	route::resource('/user', 'CrudAjaxController');
+	route::get('/table/user', 'CrudAjaxController@dataTable')->name('table.user');
 });

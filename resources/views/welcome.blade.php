@@ -7,7 +7,6 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
         <style>
@@ -71,7 +70,7 @@
                         <a href="{{ url('/absen') }}">1. Absensi</a>
                         <a href="{{ url('/crud') }}">2. CRUD Data</a>
                         <a href="{{ url('/guestbook') }}">3. WYSIWYG</a>
-                        <a href="{{ url('/crud_ajax') }}">4. CRUD AJAX</a>
+                        <a href="{{ url('/crud_ajax/user') }}">4. CRUD AJAX</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
